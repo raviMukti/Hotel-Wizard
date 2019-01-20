@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.wizard.dashboard.DashboardController">
    <children>
       <Pane layoutX="50.0" layoutY="105.0" prefHeight="500.0" prefWidth="180.0" style="-fx-background-color: #103fea;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="417.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,7 +21,7 @@
                   <Image url="@../image/Hotel.png" />
                </image>
             </ImageView>
-            <JFXButton alignment="CENTER_RIGHT" layoutX="23.0" layoutY="172.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Daftar Kamar" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <JFXButton fx:id="daftarKamar" alignment="CENTER_RIGHT" layoutX="23.0" layoutY="172.0" onAction="#daftarKamarAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Daftar Kamar" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Image url="@../image/Organization_48px.png" />
                </image>
             </ImageView>
-            <JFXButton alignment="CENTER_RIGHT" layoutX="23.0" layoutY="223.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Check In" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <JFXButton fx:id="checkIn" alignment="CENTER_RIGHT" layoutX="23.0" layoutY="223.0" onAction="#checkInAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Check In" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
@@ -47,7 +47,7 @@
                   <Image url="@../image/Book_48px.png" />
                </image>
             </ImageView>
-            <JFXButton alignment="CENTER_RIGHT" layoutX="23.0" layoutY="274.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Tagihan" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <JFXButton fx:id="tagihan" alignment="CENTER_RIGHT" layoutX="23.0" layoutY="274.0" onAction="#tagihanAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Tagihan" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
@@ -60,12 +60,12 @@
                   <Image url="@../image/Google%20Docs_48px.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="54.0" layoutX="73.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="avatar" fitHeight="50.0" fitWidth="54.0" layoutX="73.0" layoutY="382.0" onDragDetected="#avatarAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/User%20Male_52px.png" />
                </image>
             </ImageView>
-            <Label layoutX="81.0" layoutY="343.0" text="Halo," textFill="WHITE">
+            <Label fx:id="banner" layoutX="81.0" layoutY="343.0" onDragDetected="#bannerAction" text="Halo," textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
