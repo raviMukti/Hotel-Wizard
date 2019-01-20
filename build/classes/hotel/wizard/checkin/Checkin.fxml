@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="418.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.wizard.checkin.CheckinController">
+   <children>
+      <VBox layoutX="44.0" layoutY="69.0" prefHeight="323.0" prefWidth="160.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="160.0" text="Tanggal Check In" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="160.0" text="Tanggal Check Out" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lamaInapLabel" alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="160.0" text="Lama Menginap" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="90.0" prefHeight="40.0" prefWidth="160.0" text="Nama" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="40.0" prefWidth="160.0" text="Jenis Kelamin" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="170.0" prefHeight="40.0" prefWidth="160.0" text="Jenis ID" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="210.0" prefHeight="40.0" prefWidth="160.0" text="Nomor ID" textFill="#103fea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="204.0" layoutY="69.0" prefHeight="323.0" prefWidth="160.0">
+         <children>
+            <DatePicker fx:id="tanggalCheckin" prefHeight="40.0" />
+            <DatePicker fx:id="tanggalCheckout" prefHeight="40.0" />
+            <JFXTextField fx:id="lamaInap" onMouseClicked="#jumlahInap" prefHeight="40.0" />
+            <JFXTextField fx:id="namaTamu" layoutX="10.0" layoutY="90.0" prefHeight="40.0" />
+            <JFXComboBox fx:id="jenisKelamin" prefHeight="40.0" prefWidth="160.0" />
+            <JFXComboBox fx:id="jenisIdentitas" layoutX="10.0" layoutY="170.0" prefHeight="40.0" prefWidth="160.0" />
+            <JFXTextField fx:id="nomorIdentitas" prefHeight="40.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="131.0" layoutY="14.0" prefHeight="45.0" prefWidth="157.0" style="-fx-background-color: #103fea;" AnchorPane.bottomAnchor="453.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="46.0" prefWidth="190.0" text="Check In - Hotel Wizard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <JFXButton fx:id="simpan" alignment="CENTER_RIGHT" layoutX="84.0" layoutY="392.0" onAction="#simpanCheckin" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #103fea;" text="Simpan" textFill="WHITE" />
+      <JFXButton fx:id="batal" alignment="CENTER_RIGHT" layoutX="209.0" layoutY="392.0" onAction="#batalCheckin" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #103fea;" text="Batal" textFill="WHITE" />
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="97.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Downloads_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="218.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Box%20Important_48px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
